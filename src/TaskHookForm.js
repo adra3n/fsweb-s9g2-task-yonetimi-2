@@ -32,7 +32,7 @@ export default function TaskHookForm({ kisiler, submitFn }) {
           Başlık
         </label>
         <input
-          className="input-text"
+          className="block w-full border border-solid border-[#ccc] p-1 text-sm rounded-sm"
           {...register('title', { required: 'Task başlığı yazmalısınız' })}
           id="title"
           name="title"
@@ -48,7 +48,7 @@ export default function TaskHookForm({ kisiler, submitFn }) {
           Açıklama
         </label>
         <textarea
-          className="input-textarea"
+          className="block w-full border border-solid border-[#ccc] p-1 text-sm rounded-sm"
           {...register('description', {
             required: 'Task açıklaması yazmalısınız',
             minLength: {
@@ -71,7 +71,10 @@ export default function TaskHookForm({ kisiler, submitFn }) {
         <label className="text-sm block pb-1.5">İnsanlar</label>
         <div>
           {kisiler.map((p) => (
-            <label className="input-checkbox" key={p}>
+            <label
+              className="text-md pt-1.5 pb-1.5 pr-2 pl-1.5 rounded-md border border-solid border-[#ccc] mr-2 mb-2 inline-flex items-center cursor-pointer"
+              key={p}
+            >
               <input
                 {...register('people', {
                   required: 'Lütfen en az 1 kişi seçin',
@@ -100,7 +103,7 @@ export default function TaskHookForm({ kisiler, submitFn }) {
           Son teslim
         </label>
         <input
-          className="input-text"
+          className="block w-full border border-solid border-[#ccc] p-1 text-sm rounded-sm"
           {...register('deadline', {
             required: 'Son teslim tarihi seçmelisiniz',
           })}
@@ -115,7 +118,11 @@ export default function TaskHookForm({ kisiler, submitFn }) {
       </div>
 
       <div className="pt-4">
-        <button className="submit-button" type="submit" disabled={!isValid}>
+        <button
+          className="block w-full border-none px-3 py-4 bg-[#fecc91] text-black cursor-pointer rounded shadow-md disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none "
+          type="submit"
+          disabled={!isValid}
+        >
           Kaydet
         </button>
       </div>

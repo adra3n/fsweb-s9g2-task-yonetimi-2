@@ -29,12 +29,12 @@ function App() {
   return (
     <div className="h-screen flex">
       <div className="bg-white flex-shrink-0 flex-none border-r-2 border-solid border-[#f3d4b0] overflow-auto">
-        <div className="form-container">
-          <h2>Yeni Task</h2>
+        <div className="pt-8 pr-8 pb-6 pl-8 border-b border border-solid border-[#ddd]">
+          <h2 className="pb-2 text-2xl">Yeni Task</h2>
           <TaskHookForm kisiler={team} submitFn={handleTaskSubmit} />
         </div>
 
-        <div className="form-container">
+        <div className="pt-8 pr-8 pb-6  pl-8 border-b border border-solid border-[#ddd]">
           <h2>Yeni Kişi</h2>
           <PeopleForm kisiler={team} submitFn={handlePeopleSubmit} />
         </div>
