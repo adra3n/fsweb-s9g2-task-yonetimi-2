@@ -1,10 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* LAYOUT */
-.app {
+/* .app {
   height: 100vh;
   display: flex;
-}
+} */
 
-.columns {
+/* .columns {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -12,29 +16,29 @@
   padding: 2rem 2rem 1.5rem;
   gap: 2rem;
   overflow: auto;
-}
+}  */
 
-.column {
+/* .column {
   flex: 1;
   min-width: 240px;
   max-width: 360px;
-}
+} */
 
-.formColumn {
+/* .formColumn {
   background-color: #fff;
   flex: 0 0 360px;
   border-right: 1px solid #f3d4b0;
   overflow: auto;
-}
+} */
 
-.column-title {
+/* .column-title {
   font-size: 1.5rem;
   padding-left: 0.75rem;
-}
+} */
 /* LAYOUT */
 
 /* TASK */
-.task {
+/* .task {
   padding: 1.5rem;
   background-color: #fff;
   border-radius: 5px;
@@ -54,7 +58,7 @@
   color: #444;
 }
 
-.task button {
+ .task button {
   display: block;
   padding: 8px 12px;
   margin-left: auto;
@@ -63,7 +67,7 @@
   border-radius: 3px;
   border: 0;
   cursor: pointer;
-}
+} 
 
 .pill {
   display: inline-block;
@@ -86,12 +90,12 @@
   display: inline-block;
 }
 
-.normal {
+.urgent {
   background-color: #ffd9d4;
 }
-.urgent {
+.normal {
   background-color: #d4d7ff;
-}
+} */
 /* TASK */
 
 /* FORM */
@@ -105,19 +109,21 @@
   padding-bottom: 0.5rem;
 }
 
-.form-line {
+/* .form-line {
   padding-top: 1rem;
-}
+} */
 
 .input-text,
 .input-textarea {
-  display: block;
+  @apply block w-full border border-solid border-[#ccc] p-1 text-sm rounded-sm;
+
+  /* display: block;
   width: 100%;
   border: 1px solid #ccc;
   padding: 5px;
   font-size: 14px;
   line-height: 1.5;
-  border-radius: 3px;
+  border-radius: 3px; */
 }
 
 .input-checkbox {
@@ -132,17 +138,17 @@
   cursor: pointer;
 }
 
-.input-label {
+/* .input-label {
   font-size: 14px;
   display: block;
   padding-bottom: 6px;
-}
+} */
 
-.input-error {
+/* .input-error {
   font-size: 12px;
   padding-top: 3px;
   color: rgb(230, 43, 43);
-}
+} */
 
 .submit-button {
   display: block;
